@@ -38,7 +38,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(30, 25);
             label1.Name = "label1";
-            label1.Size = new Size(203, 24);
+            label1.Size = new Size(163, 18);
             label1.TabIndex = 0;
             label1.Text = "ÖĞRENCİ NUMARA:";
             // 
@@ -47,9 +47,9 @@
             maskedTextBox1.Location = new Point(239, 22);
             maskedTextBox1.Mask = "0000";
             maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(125, 30);
+            maskedTextBox1.Size = new Size(125, 26);
             maskedTextBox1.TabIndex = 1;
-            maskedTextBox1.MaskInputRejected += maskedTextBox1_MaskInputRejected;
+            maskedTextBox1.TextChanged += maskedTextBox1_TextChanged;
             // 
             // button1
             // 
@@ -59,10 +59,11 @@
             button1.TabIndex = 2;
             button1.Text = "Giriş Yap";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // Form1
+            // FrmGiris
             // 
-            AutoScaleDimensions = new SizeF(12F, 24F);
+            AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 128);
             ClientSize = new Size(487, 231);
@@ -70,8 +71,8 @@
             Controls.Add(maskedTextBox1);
             Controls.Add(label1);
             Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(4, 4, 4, 4);
-            Name = "Form1";
+            Margin = new Padding(4);
+            Name = "FrmGiris";
             Text = "Öğrenci Not Kayıt Sistemi";
             ResumeLayout(false);
             PerformLayout();
